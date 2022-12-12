@@ -61,7 +61,7 @@ public class CameraActivity extends AppCompatActivity {
             @Override
             public void onOrientationChanged(int orientation) {
                 textView.setText(Integer.toString(orientation));
-                //console
+
             }
         };
         orientationEventListener.enable();
