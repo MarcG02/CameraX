@@ -1,5 +1,6 @@
 package com.example.camerax_marc_gomez;
 
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Size;
@@ -7,6 +8,7 @@ import android.view.OrientationEventListener;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -87,6 +89,13 @@ public class CameraActivity extends AppCompatActivity {
                         new ImageCapture.OnImageSavedCallback() {
                             @Override
                             public void onImageSaved(ImageCapture.OutputFileResults outputFileResults) {
+                                Context context = getApplicationContext();
+                                CharSequence text = "Image Saved!!";
+                                int duration = Toast.LENGTH_SHORT;
+
+                                Toast toast = Toast.makeText(context, text, duration);
+                                toast.show();
+
                             }
 
                             @Override
